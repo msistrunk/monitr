@@ -12,20 +12,19 @@ class App extends Component {
 
   componentDidMount() {
     axios.get('/users')
-      .then(res => {
+      .then(res => (
         this.setState({
           users: res.data,
-        });
-      });
+        })
+      ));
   }
 
   render() {
     return (
       <div className="App">
         <ul>
-          {this.state.users.map(user => 
-            <li key={user.id}>{user.username}</li>
-          )}
+          {this.state.users.map(user =>
+            <li key={user.id}>{user.username}</li>)}
         </ul>
       </div>
     );
