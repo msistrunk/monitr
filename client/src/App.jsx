@@ -23,7 +23,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="header">HEADER</div>
+        <div className="header">
+          <h1>Monitr</h1>
+          <button className="ui inverted button blue">Login</button>
+        </div>
         <div className="body">
           <Button>TEST BUTTON</Button>
           {this.state.users.map(user =>
