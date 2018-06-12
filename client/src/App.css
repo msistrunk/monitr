@@ -1,0 +1,17 @@
+.App {
+	display: grid;
+	grid-template-rows: 100px auto 85px;
+	min-height: 100vh;
+}
+
+.header {
+  background: blue;
+}
+
+.body {
+  background: yellow;
+}
+
+.footer {
+  background: red;
+}
