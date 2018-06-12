@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { Button } from 'semantic-ui-react';
 import './App.css';
 
 class App extends Component {
@@ -22,10 +23,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <ul>
+        <div className="header">HEADER</div>
+        <div className="body">
+          <Button>TEST BUTTON</Button>
           {this.state.users.map(user =>
-            <li key={user.id}>{user.username}</li>)}
-        </ul>
+            <li key={user.id} > { user.username }</li>)}
+        </div>
+        <div className="footer">FOOTER</div>
       </div>
     );
   }
