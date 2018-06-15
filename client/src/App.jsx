@@ -1,23 +1,25 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 import { Button } from 'semantic-ui-react';
 import './App.css';
+import Login from './components/Login';
 
 class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      users: [],
-    };
-  }
+  // constructor() {
+  //   super();
+  //   this.state = {
+  //     users: [],
+  //   };
+  // }
 
   componentDidMount() {
-    axios.get('/users')
-      .then(res => (
-        this.setState({
-          users: res.data,
-        })
-      ));
+    // tested the api //
+    // axios.get('/users')
+    //   .then(res => (
+    //     this.setState({
+    //       users: res.data,
+    //     })
+    //   ));
   }
 
   render() {
@@ -25,12 +27,10 @@ class App extends Component {
       <div className="App">
         <div className="header">
           <h1>Monitr</h1>
-          <button className="ui inverted button blue">Login</button>
+          <Button className="ui inverted button blue">Login</Button>
         </div>
         <div className="body">
-          <Button>TEST BUTTON</Button>
-          {this.state.users.map(user =>
-            <li key={user.id} > { user.username }</li>)}
+          <Login />
         </div>
         <div className="footer">FOOTER</div>
       </div>
